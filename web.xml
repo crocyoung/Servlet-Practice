@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Day8_servlet</display-name>
+  
+  <!-- 注册 并且 映射 servlet的 对外访问路径 -->
+  <!-- 注册 -->
+  
+  <servlet>
+      <servlet-name>HelloServlet</servlet-name>
+      <!-- 指向完整的包名 -->
+      <servlet-class>com.it.servlet.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <display-name>111111222222222</display-name>
+    <servlet-name>QuickServlet</servlet-name>
+    <servlet-class>com.it.servlet.QuickServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>accessWebTimes</servlet-name>
+    <servlet-class>com.it.servlet.accessWebTimes</servlet-class>
+  </servlet>
+
+ 
+  
+  <!-- 映射对外访问路径 -->
+  <servlet-mapping>
+   <servlet-name>HelloServlet</servlet-name>
+   <url-pattern>/hello</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QuickServlet</servlet-name>
+    <url-pattern>/QuickServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>accessWebTimes</servlet-name>
+    <url-pattern>/access</url-pattern>
+  </servlet-mapping>
+  
+  
+    <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
